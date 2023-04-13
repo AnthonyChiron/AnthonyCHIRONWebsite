@@ -1,0 +1,248 @@
+@back-color: #0a0a0a;
+@main-color: #ffe500;
+@second-color: white;
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(ressources/Font/Montserrat-VariableFont_wght.ttf)
+    format("truetype-variations");
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./ressources/Font/RobotoFlex[GRAD\,XOPQ\,XTRA\,YOPQ\,YTAS\,YTDE\,YTFI\,YTLC\,YTUC\,opsz\,slnt\,wdth\,wght].ttf")
+    format("truetype-variations");
+}
+
+@font-face {
+  font-family: "Gloomy Things";
+  src: url("./ressources/Font/Gloomy\ Things.ttf") format("truetype-variations");
+}
+
+h1 {
+  font-family: "Montserrat";
+  font-variation-settings: "wght" 800;
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    font-family: "Montserrat";
+    font-variation-settings: "wght" 400;
+    margin: 0;
+    color: white;
+
+    .version {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      font-size: 15px;
+      color: white;
+    }
+  }
+
+  /* Styles pour le menu caché */
+  .mobile-hide {
+    display: none;
+  }
+
+  .container {
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+
+    .slide {
+      width: 100%;
+      height: 100vh;
+      overflow-x: hidden;
+      overflow-y: hidden;
+    }
+
+    .intro {
+      display: flex;
+      background-image: url("./ressources/images/intro_back.jfif");
+      background-size: 200%;
+      justify-content: center;
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+
+        .anthony {
+          align-self: flex-start;
+          margin-bottom: 0;
+          font-size: 2.5rem;
+          animation: animationAnthony 2s ease forwards;
+          letter-spacing: 0;
+        }
+
+        .chiron {
+          font-size: 2.5rem;
+          margin-top: 0;
+          align-self: flex-end;
+          visibility: hidden;
+          animation: animationChiron 2s ease forwards;
+          letter-spacing: 0;
+        }
+
+        .bgWhite {
+          background: rgba(255, 255, 255, 0.089);
+          backdrop-filter: blur(3);
+          -webkit-backdrop-filter: blur(3);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+          width: 100%;
+          border-radius: 7px;
+
+          h2 {
+            margin: 0;
+            font-family: "Roboto";
+            text-align: center;
+            font-size: 1.5rem;
+            color: transparent;
+            letter-spacing: 0.6rem;
+            animation: animationWebdevelopper 5s 0.4s ease forwards;
+            padding-left: 10px;
+            padding-top: 3px;
+            padding-bottom: 3px;
+          }
+        }
+      }
+
+      .boxTransi {
+        width: 100%;
+        height: 100px;
+        background: white;
+      }
+    }
+
+    .presentation {
+      display: flex;
+      flex-direction: column;
+      background-image: url("./ressources/images/white_back.jfif");
+      background-size: 200%;
+      width: 100%;
+
+      .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 2vh;
+
+        .backgroundText {
+          margin: 0;
+          margin-left: 4vw;
+          text-align: justify;
+          font-size: 2rem;
+          background-image: url("./ressources/images/intro_back.jfif");
+          -webkit-background-clip: text;
+          letter-spacing: 0.2rem;
+          text-indent: 0.2rem;
+          background-clip: text;
+          width: 26vw;
+          color: transparent;
+        }
+
+        .moi {
+          background-image: url("./ressources/images/intro_back.jfif");
+          background-size: 120%;
+          margin-right: 4vw;
+          border-radius: 400px;
+          width: 32%;
+        }
+      }
+
+      .content {
+        border-radius: 15px;
+        margin-top: 3vw;
+        margin-left: 3vw;
+        margin-right: 3vw;
+        display: flex;
+
+        ul {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          gap: 5vh;
+
+          li {
+            display: flex;
+            align-items: center;
+            background-image: url("./ressources/images/intro_back.jfif");
+            background-size: 180%;
+            height: 4vh;
+            padding: 1vh;
+            font-size: 1rem;
+            margin-right: 1vw;
+            border-radius: 15px;
+
+            i {
+              margin-right: 2vw;
+            }
+
+            h4 {
+            }
+          }
+        }
+
+        p {
+          flex: 3;
+          color: rgba(0, 0, 0, 0.767);
+          text-align: justify;
+
+          span {
+            font-variation-settings: "wght" 600;
+          }
+        }
+      }
+    }
+
+    .experience {
+      display: flex;
+      background-size: 200%;
+      justify-content: center;
+
+      .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 2vh;
+
+        .backgroundText {
+          margin: 0;
+          margin-left: 4vw;
+          text-align: justify;
+          font-family: "Montserrat";
+          font-size: 2rem;
+          background-image: url("./ressources/images/intro_back.jfif");
+          -webkit-background-clip: text;
+          font-variation-settings: "wght" 700;
+          letter-spacing: 0.2rem;
+          text-indent: 0.2rem;
+          background-clip: text;
+          width: 26vw;
+          color: transparent;
+        }
+      }
+    }
+
+    .projets {
+      transition: 2s;
+    }
+  }
+
+  .arrow {
+    display: flex;
+    align-self: center;
+    position: relative;
+    color: transparent;
+    animation: showWhite 4s 2s ease-in forwards, upDown 2s ease-in-out infinite;
+  }
+
+  .transparent {
+    color: transparent;
+  }
+
+  .animate {
+    animation: oui 3s ease-in-out infinite;
+  }
+}

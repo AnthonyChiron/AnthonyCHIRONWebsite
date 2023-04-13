@@ -1,0 +1,52 @@
+@keyframes animationAnthony {
+  from {
+    margin-left: -200rem;
+    font-variation-settings: "wght" 000;
+  }
+  to {
+    font-variation-settings: "wght" 300;
+  }
+}
+
+@keyframes animationChiron {
+  from {
+    margin-right: -200rem;
+    visibility: visible;
+    font-variation-settings: "wght" 200;
+  }
+  to {
+    visibility: visible;
+    font-variation-settings: "wght" 850;
+  }
+}
+
+@keyframes animationWebdevelopper {
+  from {
+    color: transparent;
+    letter-spacing: 0;
+    font-variation-settings: "slnt" 0, "wght" 50;
+  }
+  to {
+    color: rgba(85, 11, 11, 0.658);
+    letter-spacing: 0.6rem;
+    font-variation-settings: "slnt" -20, "wght" 350;
+  }
+}
+
+@keyframes showWhite {
+  from {
+    color: transparent;
+  }
+  to {
+    color: white;
+  }
+}
+
+@keyframes h1Animation {
+  from {
+    font-variation-settings: "wght" 200;
+  }
+  to {
+    font-variation-settings: "wght" 850;
+  }
+}
