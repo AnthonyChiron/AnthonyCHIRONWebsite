@@ -1,6 +1,7 @@
 @back-color: #0a0a0a;
 @main-color: #ffe500;
 @second-color: white;
+@import url("./animation.css");
 
 @font-face {
   font-family: "Montserrat";
@@ -22,6 +23,16 @@
 h1 {
   font-family: "Montserrat";
   font-variation-settings: "wght" 800;
+}
+
+p {
+  color: rgba(0, 0, 0, 0.767);
+  text-align: justify;
+  font-variation-settings: "wght" 500;
+
+  span {
+    font-variation-settings: "wght" 600;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -52,7 +63,7 @@ h1 {
 
     .slide {
       width: 100%;
-      height: 100vh;
+      height: 100%;
       overflow-x: hidden;
       overflow-y: hidden;
     }
@@ -110,7 +121,7 @@ h1 {
 
       .boxTransi {
         width: 100%;
-        height: 100px;
+        height: 100%;
         background: white;
       }
     }
@@ -120,77 +131,116 @@ h1 {
       flex-direction: column;
       background-image: url("./ressources/images/white_back.jfif");
       background-size: 200%;
-      width: 100%;
+      align-items: center;
 
-      .top {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 2vh;
+      .backgroundText {
+        margin: 0;
+        margin-top: 1vh;
+        text-align: center;
+        font-size: 7.5vw;
+        background-image: url("./ressources/images/intro_back.jfif");
+        -webkit-background-clip: text;
+        letter-spacing: 0.2rem;
+        text-indent: 0.2rem;
+        background-clip: text;
+        color: transparent;
+      }
 
-        .backgroundText {
-          margin: 0;
-          margin-left: 4vw;
-          text-align: justify;
-          font-size: 2rem;
+      .avatar {
+        position: relative;
+        height: 50vw;
+        width: 50vw;
+
+        .background {
           background-image: url("./ressources/images/intro_back.jfif");
-          -webkit-background-clip: text;
-          letter-spacing: 0.2rem;
-          text-indent: 0.2rem;
-          background-clip: text;
-          width: 26vw;
-          color: transparent;
+          background-size: 300%;
+          margin-top: 3vh;
+          border-radius: 400px;
+          height: 40vw;
+          width: 50vw;
+          bottom: 3vw;
+          position: absolute;
         }
 
-        .moi {
-          background-image: url("./ressources/images/intro_back.jfif");
-          background-size: 120%;
-          margin-right: 4vw;
+        img {
+          position: absolute;
+          width: 50vw;
           border-radius: 400px;
-          width: 32%;
+          bottom: 0;
         }
       }
 
-      .content {
-        border-radius: 15px;
-        margin-top: 3vw;
-        margin-left: 3vw;
-        margin-right: 3vw;
+      .bubble {
+        background-image: url("./ressources/images/intro_back.jfif");
+        background-size: 300%;
+        background-position: left top;
+        opacity: 0.6;
+        border-radius: 400px;
+        position: absolute;
+      }
+
+      .dot1 {
+        top: 5vw;
+        left: 5vw;
+        animation: moveDot 4s infinite;
+        width: 3vw;
+        height: 3vw;
+      }
+
+      .dot2 {
+        top: 10vw;
+        right: -5vw;
+        animation: scaleDot 5s 0.3s infinite;
+        width: 4.5vw;
+        height: 4.5vw;
+      }
+
+      .devBubble {
+        top: 20vw;
+        right: -18vw;
+        animation: scaleDot 12s infinite;
+        width: 13vw;
+        height: 13vw;
         display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+        margin-bottom: 2vw;
+      }
 
-        ul {
-          flex: 1;
+      .designBubble {
+        top: 27vw;
+        right: 55vw;
+        animation: scaleDot 10s 0.6s infinite;
+        width: 11vw;
+        height: 11vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      p {
+        padding-left: 4vw;
+        padding-right: 4vw;
+      }
+
+      .list-button {
+        display: flex;
+        justify-content: space-between;
+
+        .button {
           display: flex;
-          flex-direction: column;
-          gap: 5vh;
+          align-items: center;
+          background-image: url("./ressources/images/intro_back.jfif");
+          background-size: 150%;
+          height: 4vh;
+          width: 25vw;
+          padding: 1vh;
+          margin-right: 1vw;
+          border-radius: 15px;
 
-          li {
-            display: flex;
-            align-items: center;
-            background-image: url("./ressources/images/intro_back.jfif");
-            background-size: 180%;
-            height: 4vh;
-            padding: 1vh;
-            font-size: 1rem;
-            margin-right: 1vw;
-            border-radius: 15px;
-
-            i {
-              margin-right: 2vw;
-            }
-
-            h4 {
-            }
-          }
-        }
-
-        p {
-          flex: 3;
-          color: rgba(0, 0, 0, 0.767);
-          text-align: justify;
-
-          span {
-            font-variation-settings: "wght" 600;
+          i {
+            margin-right: 2vw;
           }
         }
       }

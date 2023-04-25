@@ -20,6 +20,36 @@
   }
 }
 
+@keyframes moveDot {
+  from {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(0.75) translateY(-8px) translateX(-3px);
+    opacity: 0.5;
+  }
+  to {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+}
+
+@keyframes scaleDot {
+  from {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(0.75) translateY(-2px) translateX(-3px);
+    opacity: 0.5;
+  }
+  to {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+}
+
 @keyframes animationWebdevelopper {
   from {
     color: transparent;
